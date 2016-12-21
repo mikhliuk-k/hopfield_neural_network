@@ -1,0 +1,16 @@
+<div class="drawing">
+  <canvas class="query" width="100px" height="100px"></canvas>
+  <br>
+  <canvas class="answer" width="100px" height="100px"></canvas>
+  <br>
+  <button type="button" class="recognize-image btn btn-success navbar-btn">Распознать</button>
+  <br>
+  <button type="button" class="add-image btn btn-primary navbar-btn">Добавить</button>
+  <br>
+  <div class="added-images">
+    <% @blocks.reverse_each do |block| %>
+        <canvas width="100px" height="100px" class="added-image" data-id="<%= block[:_id].to_s %>"></canvas>
+    <% end %>
+  </div>
+
+</div>
